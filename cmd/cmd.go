@@ -624,7 +624,7 @@ func PushHandler(cmd *cobra.Command, args []string) error {
 	if strings.HasSuffix(n.Host, ".ollama.ai") || strings.HasSuffix(n.Host, ".ollama.com") {
 		destination = "https://ollama.com/" + strings.TrimSuffix(n.DisplayShortest(), ":latest")
 	}
-	fmt.Println("\nYou can find your model at:\n")
+	fmt.Printf("\nYou can find your model at:\n\n")
 	fmt.Printf("\t%s\n", destination)
 
 	return nil
